@@ -34,15 +34,17 @@ alunos = []
 while tecla_pressionada == 's' do
   puts 'Digite o nome do aluno: '
   nome_aluno = gets.chomp
-  alunos << nome_aluno
   puts 'Digite a nota do aluno: '
   nota_aluno = gets.chomp
-  alunos << nota_aluno
   puts 'Digite o nome da disciplina: '
   nome_disciplina = gets.chomp
-  alunos << nome_disciplina
-
+  
+  alunos << {nome: nome_aluno, nota: nota_aluno, disciplina: nome_disciplina}
+  
   puts 'Deseja inserir um novo aluno? s ou n'
   tecla_pressionada = gets.chomp
 end
-puts(alunos[0] + ' tirou nota ' + alunos[1].to_s + ' em ' + alunos[2])
+
+alunos.each do |aluno|
+  puts "#{aluno[:nome]} tirou nota #{aluno[:nota]} em #{aluno[:disciplina]}" 
+end
