@@ -12,7 +12,6 @@ alunos.each do |aluno|
 end
 
 def verifica_nota(nome, nota, disciplina)
-  #alunos.each do |aluno|
   if nota >= 7
     puts "#{nome} aprovado com nota #{nota} em #{disciplina}"
   else

@@ -33,16 +33,16 @@ tecla_pressionada = 's'
 alunos = []
 while tecla_pressionada == 's' do
   puts 'Digite o nome do aluno: '
-  nome_aluno = gets.chomp
+  nome_aluno = gets.chomp()
   puts 'Digite a nota do aluno: '
-  nota_aluno = gets.chomp
+  nota_aluno = gets.to_i()
   puts 'Digite o nome da disciplina: '
-  nome_disciplina = gets.chomp
+  nome_disciplina = gets.chomp()
   
   alunos << {nome: nome_aluno, nota: nota_aluno, disciplina: nome_disciplina}
   
   puts 'Deseja inserir um novo aluno? s ou n'
-  tecla_pressionada = gets.chomp
+  tecla_pressionada = gets.chomp()
 end
 
 alunos.each do |aluno|
